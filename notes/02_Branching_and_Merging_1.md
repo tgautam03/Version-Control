@@ -101,3 +101,6 @@ Merging combines two branches.
 
 - Checkout to base branch
 - `git merge <topic branch>`
+- `git branch -d <topic branch>`
+
+This creates a merge commit.
