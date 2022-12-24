@@ -67,3 +67,38 @@ git tag -a -m"Version 2 here" v2.0
 git push origin --tags
 ```
 
+## Branches
+
+We can create a branch 
+
+```sh
+git branch <branch name>
+```
+
+Checkout switches the branch
+
+```sh
+git checkout <branch name>
+```
+
+`checkout` basically moves the HEAD. We can also checkout commits, which lead to detached HEAD.
+
+We can delete branch label (will not delete commits) using
+
+```sh
+git branch -d <branch name>
+```
+
+> We can delete unmerged branched too using `-D` flag and can undo it by checkout into the dangling commit using `git reflog`.
+
+## Merging
+
+Merging combines two branches. 
+
+### Fast Forward Merge
+
+ Moves the base branch label to the tip of the topic branch. It is only possible if no changes are made to the base branch which work on topic branch is done. Steps to do FF merge:
+
+- Checkout to base branch
+- `git merge <topic branch>`
+- `git branch -d <topic branch>`
