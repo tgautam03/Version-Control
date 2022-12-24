@@ -101,4 +101,18 @@ Let's now see how to commit changes to the repository:
 
 - `git status` checks the status of the files in working tree and staging area.
 - `git add` adds files to the staging area.
+- `git commit` adds staged content to the repo.
+- `git log` shows the commit history of the repo. We can use flags `--oneline` to get short output and `-n` to see last n commits.
+
+## Remote Repository
+
+Once we have created an empty repository on GitHub, we can run the following commands to push the local repository in-sync with the remote one:
+
+```shell
+git remote add origin https://github.com/tgautam03/Version-Control.git
+git branch -M master
+git push -u origin master
+```
+
+
 
